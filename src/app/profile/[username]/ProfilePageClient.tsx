@@ -230,57 +230,57 @@ function ProfilePageClient({user, posts, likedPosts, isFollowing:initialIsFollow
         </Tabs>
 
         <Dialog open={showEditDialog} onOpenChange={setShowEditDialog}>
-          <DialogContent className="sm:max-w-[500px] bg-gradient-to-br from-white/95 via-blue-50/90 to-teal-50/95 dark:from-slate-800/95 dark:via-slate-700/90 dark:to-slate-800/95 backdrop-blur-xl border border-blue-200/30 dark:border-slate-600/30 shadow-2xl">
+          <DialogContent className="sm:max-w-[500px] bg-gradient-to-br from-white/95 via-green-50/90 to-emerald-50/95 dark:from-[#222629]/95 dark:via-[#6b6e70]/20 dark:to-[#222629]/95 backdrop-blur-xl border border-[#6b6e70]/30 dark:border-[#6b6e70]/50 shadow-2xl">
             <DialogHeader>
-              <DialogTitle className="text-xl font-bold bg-gradient-to-r from-slate-800 via-blue-700 to-teal-700 dark:from-slate-100 dark:via-blue-300 dark:to-teal-300 bg-clip-text text-transparent">Edit Profile</DialogTitle>
+              <DialogTitle className="text-xl font-bold bg-gradient-to-r from-[#222629] via-[#61892F] to-[#222629] dark:from-white dark:via-[#86c232] dark:to-white bg-clip-text text-transparent">Edit Profile</DialogTitle>
             </DialogHeader>
             <div className="space-y-6 py-4">
               <div className="space-y-2">
-                <Label className="text-slate-700 dark:text-slate-300 font-medium">Name</Label>
+                <Label className="text-[#222629] dark:text-[#6b6e70] font-medium">Name</Label>
                 <Input
                   name="name"
                   value={editForm.name}
                   onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
                   placeholder="Your name"
-                  className="bg-white/80 dark:bg-slate-800/80 border-blue-200/50 dark:border-slate-600/50 focus:border-blue-400 dark:focus:border-blue-500 rounded-lg shadow-sm"
+                  className="bg-white/80 dark:bg-[#222629]/80 border-[#6b6e70]/30 dark:border-[#6b6e70]/50 focus:border-[#61892F] dark:focus:border-[#86c232] rounded-lg shadow-sm"
                 />
               </div>
               <div className="space-y-2">
-                <Label className="text-slate-700 dark:text-slate-300 font-medium">Bio</Label>
+                <Label className="text-[#222629] dark:text-[#6b6e70] font-medium">Bio</Label>
                 <Textarea
                   name="bio"
                   value={editForm.bio}
                   onChange={(e) => setEditForm({ ...editForm, bio: e.target.value })}
-                  className="min-h-[100px] bg-white/80 dark:bg-slate-800/80 border-blue-200/50 dark:border-slate-600/50 focus:border-blue-400 dark:focus:border-blue-500 rounded-lg shadow-sm resize-none"
+                  className="min-h-[100px] bg-white/80 dark:bg-[#222629]/80 border-[#6b6e70]/30 dark:border-[#6b6e70]/50 focus:border-[#61892F] dark:focus:border-[#86c232] rounded-lg shadow-sm resize-none"
                   placeholder="Tell us about yourself"
                 />
               </div>
               <div className="space-y-2">
-                <Label className="text-slate-700 dark:text-slate-300 font-medium">Location</Label>
+                <Label className="text-[#222629] dark:text-[#6b6e70] font-medium">Location</Label>
                 <Input
                   name="location"
                   value={editForm.location}
                   onChange={(e) => setEditForm({ ...editForm, location: e.target.value })}
                   placeholder="Where are you based?"
-                  className="bg-white/80 dark:bg-slate-800/80 border-blue-200/50 dark:border-slate-600/50 focus:border-blue-400 dark:focus:border-blue-500 rounded-lg shadow-sm"
+                  className="bg-white/80 dark:bg-[#222629]/80 border-[#6b6e70]/30 dark:border-[#6b6e70]/50 focus:border-[#61892F] dark:focus:border-[#86c232] rounded-lg shadow-sm"
                 />
               </div>
               <div className="space-y-2">
-                <Label className="text-slate-700 dark:text-slate-300 font-medium">Website</Label>
+                <Label className="text-[#222629] dark:text-[#6b6e70] font-medium">Website</Label>
                 <Input
                   name="website"
                   value={editForm.website}
                   onChange={(e) => setEditForm({ ...editForm, website: e.target.value })}
                   placeholder="Your personal website"
-                  className="bg-white/80 dark:bg-slate-800/80 border-blue-200/50 dark:border-slate-600/50 focus:border-blue-400 dark:focus:border-blue-500 rounded-lg shadow-sm"
+                  className="bg-white/80 dark:bg-[#222629]/80 border-[#6b6e70]/30 dark:border-[#6b6e70]/50 focus:border-[#61892F] dark:focus:border-[#86c232] rounded-lg shadow-sm"
                 />
               </div>
             </div>
-            <div className="flex justify-end gap-3 pt-4 border-t border-blue-200/30 dark:border-slate-600/30">
+            <div className="flex justify-end gap-3 pt-4 border-t border-[#6b6e70]/30 dark:border-[#6b6e70]/50">
               <DialogClose asChild>
-                <Button variant="outline" className="bg-white/80 dark:bg-slate-800/80 border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg shadow-sm">Cancel</Button>
+                <Button variant="outline" className="bg-white/80 dark:bg-[#222629]/80 border-[#6b6e70]/50 dark:border-[#6b6e70]/70 hover:bg-[#6b6e70]/10 dark:hover:bg-[#6b6e70]/20 text-[#222629] dark:text-[#6b6e70] rounded-lg shadow-sm">Cancel</Button>
               </DialogClose>
-              <Button onClick={handleEditSubmit} className="bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 rounded-lg">Save Changes</Button>
+              <Button onClick={handleEditSubmit} className="bg-gradient-to-r from-[#61892F] to-[#86c232] hover:from-[#61892F]/90 hover:to-[#86c232]/90 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 rounded-lg">Save Changes</Button>
             </div>
           </DialogContent>
         </Dialog>
