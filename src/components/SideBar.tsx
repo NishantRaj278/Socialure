@@ -88,26 +88,26 @@ const SideBar = async () => {
 const NotAuthenticatedUser = () => {
     return(
         <div className="sticky top-20">
-          <Card className="border border-slate-200/50 dark:border-slate-700/50 shadow-lg bg-gradient-to-br from-white via-slate-50/80 to-blue-50/60 dark:from-slate-900 dark:via-slate-900/95 dark:to-slate-800/90 backdrop-blur-sm hover:shadow-xl hover:shadow-slate-300/30 dark:hover:shadow-slate-900/50 transition-all duration-500 group relative">
+          <Card className="border border-[#6b6e70]/30 dark:border-[#6b6e70]/50 shadow-lg bg-gradient-to-br from-white via-green-50/80 to-emerald-50/60 dark:from-[#222629] dark:via-[#222629]/95 dark:to-[#6b6e70]/20 backdrop-blur-sm hover:shadow-xl hover:shadow-[#61892F]/20 dark:hover:shadow-[#222629]/50 transition-all duration-500 group relative">
             {/* Elegant hover effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/3 via-teal-500/3 to-cyan-500/3 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#61892F]/3 via-[#86c232]/3 to-emerald-500/3 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
             
             <CardHeader className="relative z-10 text-center pb-4">
-              <CardTitle className="text-xl font-bold text-slate-900 dark:text-white">Welcome to Socialure!</CardTitle>
+              <CardTitle className="text-xl font-bold bg-gradient-to-r from-[#222629] via-[#61892F] to-[#222629] dark:from-white dark:via-[#86c232] dark:to-white bg-clip-text text-transparent">Welcome to Socialure!</CardTitle>
             </CardHeader>
             <CardContent className="relative z-10">
               <div className="text-center space-y-4">
-                <p className="text-slate-600 dark:text-slate-400 mb-6 font-medium leading-relaxed">
+                <p className="text-[#6b6e70] dark:text-[#6b6e70] mb-6 font-medium leading-relaxed">
                   Join our community to share your thoughts, connect with others, and explore amazing content.
                 </p>
                 <div className="space-y-3">
                   <SignInButton mode="modal">
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium h-11 rounded-lg transition-all duration-200 hover:scale-105 shadow-md hover:shadow-lg">
+                    <Button className="w-full bg-gradient-to-r from-[#61892F] to-[#86c232] hover:from-[#61892F]/90 hover:to-[#86c232]/90 text-white font-medium h-11 rounded-lg transition-all duration-200 hover:scale-105 shadow-md hover:shadow-lg">
                       Sign In
                     </Button>
                   </SignInButton>
                   <SignUpButton mode="modal">
-                    <Button className="w-full border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-600 font-medium h-11 rounded-lg transition-all duration-200 hover:scale-105" variant="outline">
+                    <Button className="w-full border border-[#6b6e70]/50 dark:border-[#6b6e70]/70 text-[#222629] dark:text-[#6b6e70] hover:text-[#61892F] dark:hover:text-[#86c232] hover:border-[#61892F]/50 dark:hover:border-[#86c232]/50 font-medium h-11 rounded-lg transition-all duration-200 hover:scale-105" variant="outline">
                       Create Account
                     </Button>
                   </SignUpButton>
