@@ -2,8 +2,9 @@ import { getProfileByUsername, getUserLikedPostsByUserID, getUserPostsByUserID, 
 import ProfilePageClient from "@/app/profile/[username]/ProfilePageClient";
 import { notFound } from "next/navigation";
 
-export const generateMetadata = async ({params} : {params: {username : string}}) => {
-    const user = await getProfileByUsername(params.username);
+export const generateMetadata = async ({params} : {params: Promise<{username : string}>}) => {
+    const {username} = await params;
+    const user = await getProfileByUsername(username);
     if(!user) return;
 
     return {
@@ -12,8 +13,9 @@ export const generateMetadata = async ({params} : {params: {username : string}})
     };
 }
 
-async function ProfilePage({params} : {params: {username: string}}) {
-    const user = await getProfileByUsername(params.username);
+async function ProfilePage({params} : {params: Promise<{username: string}>}) {
+    const {username} = await params;
+    const user = await getProfileByUsername(username);
     if(!user) notFound();
 
     const [userPosts, likedPosts, isCurrentUserFollowing] = await Promise.all([
