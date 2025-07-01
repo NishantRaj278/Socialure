@@ -39,7 +39,7 @@ export default function RootLayout({
               defaultTheme="system"
               enableSystem
               disableTransitionOnChange>
-                <div className="min-h-screen">
+                <div className="min-h-screen bg-gradient-to-br from-green-50 via-green-100/60 to-black/10 dark:from-black dark:via-green-950/40 dark:to-green-900/20">
                   <Navbar />
                   <main className="py-8">
                     <div className="max-w-7xl mx-auto px-4">

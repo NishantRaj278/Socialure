@@ -25,7 +25,6 @@ export async function createPost(content:string, imageUrl:string){
     }
 }
 
-
 export async function getPosts(){
     try{
         const posts  = await prisma.post.findMany({

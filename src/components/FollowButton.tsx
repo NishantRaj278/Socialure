@@ -26,12 +26,23 @@ const FollowButton = ({userId} : {userId: string}) => {
 
   return (
     <Button
-    size={"sm"}
-    variant={"secondary"}
-    onClick={handleFollow}
-    disabled={isLoading}
-    className="w-20">
-        {isLoading ? <Loader2Icon className="size-4 animate-spin"/> : "Follow"}
+      size="sm"
+      onClick={handleFollow}
+      disabled={isLoading}
+      className={`transition-all duration-200 rounded-lg font-medium h-8 px-4 ${
+        isLoading
+          ? "bg-[#6b6e70]/50 dark:bg-[#6b6e70]/30 text-[#6b6e70] dark:text-[#6b6e70] cursor-not-allowed"
+          : "bg-gradient-to-r from-[#61892F] to-[#86c232] hover:from-[#86c232] hover:to-[#61892F] text-white hover:scale-105 shadow-md hover:shadow-lg"
+      }`}
+    >
+      {isLoading ? (
+        <span className="flex items-center gap-2">
+          <Loader2Icon className="size-4 animate-spin" />
+          <span className="text-xs">Loading...</span>
+        </span>
+      ) : (
+        <span className="text-sm font-semibold">Follow</span>
+      )}
     </Button>
   )
 }
